@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Sensors with counts of measurements</h2>
+<hr />
+
+<table class="table">
+    @*<thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SensorsOverview[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SensorsOverview[0].Location)
+            </th>
+            <th class="text-center col-md-1">
+                @Html.DisplayNameFor(model => model.SensorsOverview[0].CountMeasurements)
+            </th>
+            <th class="text-center col-md-1">
+                @Html.DisplayNameFor(model => model.SensorsOverview[0].Unit)
+            </th>
+            <th></th>
+        </tr>
+    </thead>*@
+    <tbody>
+    
+    @*TODO*@
+
+    </tbody>
+</table>
+
+<script>
+    function DoPostBack() {
+        document.formIndex.submit();
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
