@@ -6,7 +6,6 @@ namespace SmartSchool.Core.Entities
 {
     public class Measurement : EntityObject
     {
-
         public int SensorId { get; set; }
 
         [ForeignKey(nameof(SensorId))]

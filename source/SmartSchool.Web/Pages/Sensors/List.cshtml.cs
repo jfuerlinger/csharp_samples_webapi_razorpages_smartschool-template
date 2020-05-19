@@ -11,24 +11,24 @@ using SmartSchool.Core.Entities;
 
 namespace SmartSchool.Web.Pages.Sensors
 {
-    public class ListModel : PageModel
+  public class ListModel : PageModel
+  {
+    private readonly IUnitOfWork _unitOfWork;
+
+    public ListModel(IUnitOfWork unitOfWork)
     {
-        private readonly IUnitOfWork _unitOfWork;
-
-        public ListModel(IUnitOfWork unitOfWork)
-        {
-            _unitOfWork = unitOfWork;
-        }
-
-        public IActionResult OnGet(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IActionResult OnPost()
-        {
-            throw new NotImplementedException();
-        }
-
+      _unitOfWork = unitOfWork;
     }
+
+    public async Task<IActionResult> OnGet(int id)
+    {
+      throw new NotImplementedException();
+    } 
+
+    public async Task<IActionResult> OnPost()
+    {
+      throw new NotImplementedException();
+    }
+
+  }
 }

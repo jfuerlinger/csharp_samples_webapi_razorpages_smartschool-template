@@ -3,23 +3,21 @@ using SmartSchool.Core.Contracts;
 using SmartSchool.Core.Entities;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SmartSchool.Persistence
 {
-    public class MeasurementRepository : IMeasurementRepository
+  public class MeasurementRepository : IMeasurementRepository
+  {
+    private readonly ApplicationDbContext _dbContext;
+
+    public MeasurementRepository(ApplicationDbContext dbContext)
     {
-        private ApplicationDbContext _dbContext;
-
-        public MeasurementRepository(ApplicationDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-
-
-        public void AddRange(Measurement[] measurements)
-        {
-            _dbContext.Measurements.AddRange(measurements);
-        }
-
+      _dbContext = dbContext;
     }
+
+    public async Task AddRangeAsync(Measurement[] measurements) =>
+      await _dbContext.Measurements
+        .AddRangeAsync(measurements);
+  }
 }

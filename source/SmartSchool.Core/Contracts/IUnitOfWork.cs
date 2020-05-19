@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Threading.Tasks;
-using SmartSchool.Core.Contracts;
 
 namespace SmartSchool.Core.Contracts
 {
-    public interface IUnitOfWork: IDisposable
+  public interface IUnitOfWork: IDisposable
     {
- 
         IMeasurementRepository MeasurementRepository { get; }
         ISensorRepository SensorRepository { get; }
 
-        int SaveChanges();
+        Task<int> SaveChangesAsync();
 
-        void DeleteDatabase();
-
-        void MigrateDatabase();
+        Task DeleteDatabaseAsync();
+        Task MigrateDatabaseAsync();
     }
 }

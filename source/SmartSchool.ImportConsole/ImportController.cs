@@ -4,11 +4,11 @@ using System.Linq;
 using SmartSchool.Core.Entities;
 using Utils;
 
-namespace SmartSchool.TestConsole
+namespace SmartSchool.ImportConsole
 {
     public class ImportController
     {
-        const string Filename = "measurements.csv";
+        private const string FileName = "measurements.csv";
 
         /// <summary>
         /// Liefert die Messwerte mit den dazugehörigen Sensoren
@@ -17,6 +17,5 @@ namespace SmartSchool.TestConsole
         {
             throw new NotImplementedException();
         }
-
     }
 }

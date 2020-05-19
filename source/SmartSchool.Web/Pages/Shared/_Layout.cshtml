@@ -29,11 +29,12 @@
                 <a asp-page="/Index" class="navbar-brand">SmartSchool.Web</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
-                </ul>
+              <ul class="nav navbar-nav">
+                <li><a asp-page="/Index">Home</a></li>
+                <li><a asp-page="/About">About</a></li>
+                <li><a asp-page="/Contact">Contact</a></li>
+                <li><a href="~/swagger">API</a></li>
+              </ul>
             </div>
         </div>
     </nav>
@@ -44,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - SmartSchool.Web</p>
+            <p>&copy; 2020 - SmartSchool.Web</p>
         </footer>
     </div>
 

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using SmartSchool.Core.Contracts;
 
 namespace SmartSchool.Web.Pages
@@ -18,10 +15,9 @@ namespace SmartSchool.Web.Pages
             _unitOfWork = unitOfWork;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGet()
         {
-            return Page();
-
+          return Page();
         }
     }
 }

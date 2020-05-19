@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30028.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSchool.Core", "SmartSchool.Core\SmartSchool.Core.csproj", "{6569E7D2-2325-485B-8B48-8048081E3221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartSchool.Core", "SmartSchool.Core\SmartSchool.Core.csproj", "{6569E7D2-2325-485B-8B48-8048081E3221}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{09CEF593-77F6-4329-90B0-A28640A098BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{09CEF593-77F6-4329-90B0-A28640A098BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSchool.Persistence", "SmartSchool.Persistence\SmartSchool.Persistence.csproj", "{CE645051-0D6A-4930-A9B1-BD42FD61FA7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartSchool.Persistence", "SmartSchool.Persistence\SmartSchool.Persistence.csproj", "{CE645051-0D6A-4930-A9B1-BD42FD61FA7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSchool.ImportConsole", "SmartSchool.ImportConsole\SmartSchool.ImportConsole.csproj", "{03924BBC-3BC0-4D55-94BE-89EA64C57D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartSchool.ImportConsole", "SmartSchool.ImportConsole\SmartSchool.ImportConsole.csproj", "{03924BBC-3BC0-4D55-94BE-89EA64C57D72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSchool.Web", "SmartSchool.Web\SmartSchool.Web.csproj", "{0D8A32FB-963F-4304-B6E0-38D9D5E7330D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartSchool.Web", "SmartSchool.Web\SmartSchool.Web.csproj", "{0D8A32FB-963F-4304-B6E0-38D9D5E7330D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

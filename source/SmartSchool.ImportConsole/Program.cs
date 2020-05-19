@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using SmartSchool.Core.Contracts;
 using SmartSchool.Persistence;
-using SmartSchool.TestConsole;
+using SmartSchool.ImportConsole;
 
 namespace SmartSchool.ImportConsole
 {
     class Program
     {
-        static void Main()
+        static async Task Main()
         {
             Console.WriteLine(">> Import der Measurements und Sensors in die Datenbank");
             Console.WriteLine("--------------------------------------------------------");
@@ -16,9 +17,9 @@ namespace SmartSchool.ImportConsole
             using (IUnitOfWork unitOfWorkImport = new UnitOfWork())
             {
                 Console.WriteLine("Datenbank löschen");
-                unitOfWorkImport.DeleteDatabase();
+                await unitOfWorkImport.DeleteDatabaseAsync();
                 Console.WriteLine("Datenbank migrieren");
-                unitOfWorkImport.MigrateDatabase();
+                await unitOfWorkImport.MigrateDatabaseAsync();
                 Console.WriteLine("Messwerte werden von measurements.csv eingelesen");
 
                 var measurements = ImportController.ReadFromCsv().ToArray();
@@ -31,9 +32,9 @@ namespace SmartSchool.ImportConsole
 
                 Console.WriteLine(
                     $"  Es wurden {measurements.Count()} Messwerte eingelesen, werden in Datenbank gespeichert ...");
-                unitOfWorkImport.MeasurementRepository.AddRange(measurements);
+                await unitOfWorkImport.MeasurementRepository.AddRangeAsync(measurements);
                 int countSensors = measurements.GroupBy(m => m.Sensor).Count();
-                int savedRows = unitOfWorkImport.SaveChanges();
+                int savedRows = await unitOfWorkImport.SaveChangesAsync();
                 Console.WriteLine
                 (
                     $"{countSensors} Sensoren und {savedRows - countSensors} Messwerte wurden in Datenbank gespeichert!");
