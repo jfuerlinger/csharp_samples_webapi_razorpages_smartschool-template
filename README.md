@@ -61,9 +61,8 @@ Ergänzen Sie das Template um die entsprechenden Pages.
 
 * Funktionalität
    * Name, Unit und Location können geändert werden
-* Validierungen
-   * Name und Location müssen vorhanden sein
-   * Es kann keine zwei Sensoren geben, die den gleichen Namen und die gleiche Location haben
+* Validierungen 
+   * Siehe nächste Überschrift 
    * Es sind entsprechende Fehlermeldungen beim fehlerhaften Feld auszugeben
 * "Save" führt zur Überblicksseite des Sensors mit den letzten 20 Messungen
 * "Back to List" führt wieder auf die Hauptseite
