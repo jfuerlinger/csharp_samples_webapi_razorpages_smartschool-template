@@ -24,6 +24,9 @@ Die einzelnen Zeilen der `csv`-Datei sind so zu verdichten, dass am Schluss eine
 
 ![import-console](images/01_import_console.png)
 
+**Hinweis:**
+Sollten Probleme bei der Implementierung der `ImportConsole` auftreten, so kann eine funktionierende `ImportConsole` [hier](https://github.com/jfuerlinger/csharp_samples_webapi_razorpages_smartschool-template/releases/download/v1.0/SmartSchool.ImportConsole.zip) heruntergeladen werden. Natürlich gibt es in diesem Fall einen entsprechenden Punkteabzug.
+
 Die Migration wurde bereits angelegt und muss nur verwendet werden, wenn an den Entitätsklassen Änderungen vorgenommen werden:
 
 * Persistence als StartupProject 
